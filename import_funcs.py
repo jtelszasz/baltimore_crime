@@ -32,10 +32,10 @@ def import_weather():
 
 def import_BPDarrests():
 
-	BPD_arrests = pd.read_csv('BPD_Arrests.csv',parse_dates=[['arrestDate','arrestTime']])
-	BPD_arrests['timestamp'] = BPD_arrests['arrestDate_arrestTime']
+	BPD_arrests = pd.read_csv('raw_data/BPD_Arrests_2015-06-10.csv',parse_dates=[['ArrestDate','ArrestTime']])
+	BPD_arrests['timestamp'] = BPD_arrests['ArrestDate_ArrestTime']
 	BPD_arrests.index = pd.to_datetime(BPD_arrests['timestamp'])
-	del BPD_arrests['arrestDate_arrestTime']
+	del BPD_arrests['ArrestDate_ArrestTime']
 	del BPD_arrests['timestamp']
 
 	return BPD_arrests
