@@ -1,0 +1,10 @@
+*.pyc
+*.gdoc
+*.zip
+bcWeather*
+BPD_Arrests_2015-03-18.csv
+BPD_Arrests_2015-06-10.csv
+BPD_Arrests.csv
+BPD_Part_1_Victim_Based_Crime_Data_2015-03-18.csv
+BPD_Part_1_Victim_Based_Crime_Data_2015-06-10.csv
+Chicago_All_Crimes.csv
