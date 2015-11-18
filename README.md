@@ -1,6 +1,6 @@
 # Baltimore Crime and Arrests
 
-This repository contains analysis files that investigate the change in policing tactics, primarily through changes in arrests, for Baltimore in 2015.
+This repository contains analysis files that investigate the change in policing tactics, primarily through changes in arrests, for Baltimore in 2015.	
 
 ### Data
 
