@@ -1,5 +1,9 @@
 # Baltimore Crime and Arrests
 
+Justin Elszasz is analyzes open data for the Baltimore community at his website [The Training Set](http://www.thetrainingset.com).
+
+## Description
+
 This repository contains analysis files that investigate the change in policing tactics, primarily through changes in arrests, for Baltimore in 2015.	
 
 ## Data
@@ -9,8 +13,22 @@ This repository contains analysis files that investigate the change in policing 
 
 ## Analysis Files
 
-##### "import_funcs.py"
+**"time_parser.py"**
+Contains only time_parser() function for parsing dates/times from NOAA datasets.
 
-##### "arrests_immed_after_FreddieGray.ipynb"
+* **time_parser()**
 
-##### "post_freddie_gray_trends.ipynb"
+**"import_funcs.py"**
+Contains several functions for importing Baltimore arrest and weather data.
+
+* **import_BPD_arrests()**
+
+* **import_CHI_arrests()**
+
+* **import_weather()**
+
+* **import_employees()**
+
+#### "arrests_immed_after_FreddieGray.ipynb"
+
+#### "post_freddie_gray_trends.ipynb"

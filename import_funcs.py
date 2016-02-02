@@ -32,11 +32,16 @@ def import_weather():
 
 def import_BPDarrests():
 
-	BPD_arrests = pd.read_csv('raw_data/BPD_Arrests_2015-11-07.csv',parse_dates=[['ArrestDate','ArrestTime']])
+	BPD_arrests = pd.read_csv('raw_data/BPD_Arrests_2016-01-07.csv',parse_dates=[['ArrestDate','ArrestTime']])
 	BPD_arrests['timestamp'] = BPD_arrests['ArrestDate_ArrestTime']
 	BPD_arrests.index = pd.to_datetime(BPD_arrests['timestamp'])
 	del BPD_arrests['ArrestDate_ArrestTime']
 	del BPD_arrests['timestamp']
+
+	# A little bit of processing/clean-up - this breaks 'ChargeDescription' field in two, divided at '||'
+	BPD_arrests['ChargeDescr1'] = BPD_arrests.ChargeDescription.apply(lambda x: str(x).split('||')[0])
+	BPD_arrests['ChargeDescr2'] = BPD_arrests.ChargeDescription.apply(lambda x: str(x).split('||')[1] if len(str(x).split('||'))>1 else '')
+	BPD_arrests.Neighborhood = BPD_arrests.Neighborhood.str.upper()
 
 	return BPD_arrests
 
